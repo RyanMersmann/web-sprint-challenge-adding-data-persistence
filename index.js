@@ -9,7 +9,7 @@ server.use('/api/projects', projectsRouter)
 const PORT = 5000;
 
 server.get('/', (req, res) => {
-    res.json({message: 'The Server is running'});
+    res.json({message: 'Welcome to Starfleet'});
 })
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
