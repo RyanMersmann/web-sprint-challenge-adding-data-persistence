@@ -8,7 +8,9 @@ exports.up = function(knex) {
             .unique()
             .notNullable();
         table.string('description');
-        table.boolean('completed').notNullable().defaultTo(false);
+        table.boolean('completed')
+            .notNullable()
+            .defaultTo(false);
     })
     .createTable('tasks', table =>
     {
@@ -24,7 +26,9 @@ exports.up = function(knex) {
             .unique()
             .notNullable();
         table.string('notes');
-        table.boolean('completed').notNullable().defaultTo(false);
+        table.boolean('completed')
+            .notNullable()
+            .defaultTo(false);
     })
     .createTable('resources', table =>
     {

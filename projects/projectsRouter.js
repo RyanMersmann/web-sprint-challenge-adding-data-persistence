@@ -1,8 +1,8 @@
 const express = require('express');
-
 const Projects = require('./projects-model');
-
 const router = express.Router();
+
+// GET REQUESTS
 
 router.get('/', (req, res) => {
     Projects.getProjects()
@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
         })
         .catch(error => {
             console.log(error);
-            res.status(500).json({ error: 'There was an error adding your project.'})
+            res.status(500).json({ error: 'There was an error creating a project.'})
         });
 });
 
@@ -57,7 +57,7 @@ router.post('/tasks', (req, res) => {
         })
         .catch(error => {
             console.log(error);
-            res.status(500).json({ error: 'There was an error adding your task.'})
+            res.status(500).json({ error: 'There was an error creating a task.'})
         });
 });
 
@@ -68,7 +68,7 @@ router.post('/resources', (req, res) => {
         })
         .catch(error => {
             console.log(error);
-            res.status(500).json({ error: 'There was an error adding your resource.'})
+            res.status(500).json({ error: 'There was an error creating a resource.'})
         });
 });
 
